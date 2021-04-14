@@ -35,7 +35,6 @@ def createInputJson(output_file,
                     catGT_loccar_min_um = 40,
                     catGT_loccar_max_um = 160,
                     catGT_cmd_string = '-prb_fld -out_prb_fld -aphipass=300-gfix=0.40,0.10,0.02',
-                    catGT_extract_string = '',
                     noise_template_use_rf = True,
                     event_ex_param_str = 'XD=4,1,50',
                     tPrime_im_ex_list = 'SY=0,384,6,500',
@@ -66,8 +65,8 @@ def createInputJson(output_file,
     
     # location of kilosor respository and kilosort version
 
-    kilosort_repository = r'C:\Users\labadmin\Documents\jic\KS3_fork\Kilosort2'
-    KS2ver = '3.0'      # must equal '3.0', '2.5' or '2.0', and match the kiilosort_repository
+    kilosort_repository = r'C:\Users\labadmin\Documents\jic\KS20_release'
+    KS2ver = '2.0'      # must equal '3.0', '2.5' or '2.0', and match the kiilosort_repository
     
     # KS 3.0 does not yet output pcs.
     if KS2ver == '3.0':
@@ -118,7 +117,7 @@ def createInputJson(output_file,
             print('SpikeGLX params read from meta')
             print('probe type: {:s}, sample_rate: {:.5f}, num_channels: {:d}, uVPerBit: {:.4f}'.format\
                   (probe_type, sample_rate, num_channels, uVPerBit))
-        print('kilosort output directory: ' + kilosort_output_directory )
+        #print('kilosort output directory: ' + kilosort_output_directory )
 
         
     else:
@@ -171,7 +170,7 @@ def createInputJson(output_file,
             "extracted_data_directory": extracted_data_directory,
             "kilosort_output_directory": kilosort_output_directory,
             "kilosort_output_tmp": kilosort_output_tmp
-        },
+       },
 
         "common_files": {
             "settings_json" : npx_directory,
@@ -320,7 +319,6 @@ def createInputJson(output_file,
             "loccar_inner" : catGT_loccar_min_sites,
             "loccar_outer": catGT_loccar_max_sites,
             "cmdStr" : catGT_cmd_string,
-            "extract_string" : catGT_extract_string,
             "catGTPath" : catGTPath
         },
 
