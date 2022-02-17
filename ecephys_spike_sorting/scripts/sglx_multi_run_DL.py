@@ -46,7 +46,7 @@ logName = 'practice2_log.csv'
 
 # Raw data directory = npx_directory
 # run_specs = name, gate, trigger and probes to process
-npx_directory = r'F:\ephys\DL004'
+npx_directory = r'I:\ephys\DL034'
 
 # Each run_spec is a list of 4 strings:
 #   undecorated run name (no g/t specifier, the run field in CatGT)
@@ -59,8 +59,158 @@ npx_directory = r'F:\ephys\DL004'
 #           these strings must match a key in the param dictionaries above.
 
 run_specs = [									
-						# ['DL002', '0', 'start,end', '0', ['default'] ]
-                        ['20210310', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210308', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210309', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210310', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210311', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210322', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210323', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210324', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210325', '0', '0,0', '0', ['default'] ]
+                        #['20210329', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210330', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210331', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210409', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210410', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210411', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210412', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210422', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210423', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210424', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210425', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210409', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210410', '0', '0,0', '0:1', ['default','default'] ],
+                        #['20210411', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210412', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210411', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210417', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210418', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210419', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210420', '0', '0,0', '0', ['default'] ]
+                        #['20210325', '0', '0,0', '0', ['default'] ]
+                        #['20210430', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210501', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210502', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210503', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210506', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210507', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210508', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210509', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210526', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210523', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210524', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210525', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210522', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210513', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210514', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210515', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210516', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210531', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210530', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210529', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210601', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210527', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210528', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210529', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210530', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210531', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210521', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210522', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210523', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210524', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210525', '0', '0,0', '0', ['default'] ]
+                        #['20210604', '0', '0,0', '0', ['default'] ],
+                        #['20210605', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210606', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210607', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210608', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210609', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210610', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210611', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210614', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210615', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210616', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210617', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210618', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210619', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210620', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210621', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210622', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210623', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210624', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210625', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210626', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210627', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210628', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210629', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210630', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210701', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210702', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20210707', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210708', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210709', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210710', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210711', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210712', '0', '0,0', '1', ['default'] ]
+                        #['20210713', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20210714', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20211217', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20211218', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20211219', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20211220', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20211221', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20211222', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20211223', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20211224', '0', '0,0', '0', ['default'] ]
+                        #['20211222', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20211223', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20211224', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20211225', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20211229', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20211230', '0', '0,0', '0', ['default'] ],
+                        #['20211231', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20220104', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220105', '0', '0,0', '0', ['default'] ],
+                        #['20220106', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220107', '0', '0,0', '0', ['default'] ]
+                        #['20220109', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220110', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220111', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20220112', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20220113', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20220106', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220107', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220109', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20220110', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220111', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220112', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220113', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20220120', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220121', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220122', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220123', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220124', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220125', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20220126', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220127', '0', '0,0', '0:1', ['default', 'default'] ]
+                        #['20220203', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220204', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220205', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220206', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220207', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220208', '0', '0,0', '0:1', ['default', 'default'] ],
+                        #['20220209', '0', '0,0', '0:1', ['default', 'default'] ]
+                        ['20220204', '0', '0,0', '0:1', ['default', 'default'] ],
+                        ['20220205', '0', '0,0', '0:1', ['default', 'default'] ],
+                        ['20220206', '0', '0,0', '0:1', ['default', 'default'] ],
+                        ['20220207', '0', '0,0', '0:1', ['default', 'default'] ],
+                        ['20220208', '0', '0,0', '0:1', ['default', 'default'] ],
+                        ['20220209', '0', '0,0', '0:1', ['default', 'default'] ],
+                        ['20220210', '0', '0,0', '0:1', ['default', 'default'] ],
+                        ['20220211', '0', '0,0', '0', ['default'] ]
+                        #['20181125', '0', '0,0', '0', ['default'] ]
+                        #['20181125', '0', 'start,end', '0', ['default'] ]
+                        #['20210818', '0', '0,0', '0', ['default'] ]
 ]
 
 # ------------------
@@ -69,17 +219,19 @@ run_specs = [
 # Set to an existing directory; all output will be written here.
 # Output will be in the standard SpikeGLX directory structure:
 # run_folder/probe_folder/*.bin
-catGT_dest = r'F:\kilosort_datatemp'
+catGT_dest = r'I:\kilosort_datatemp\DL034'
 
 # ------------
 # CatGT params
 # ------------
+
 run_CatGT = True   # set to False to sort/process previously processed data.
 #run_CatGT = False   # set to False to sort/process previously processed data.
 
 
 # CAR mode for CatGT. Must be equal to 'None', 'gbldmx', or 'loccar'
 car_mode = 'loccar'
+#car_mode = 'None'
 # inner and outer radii, in um for local comman average reference, if used
 loccar_min = 40
 loccar_max = 160
@@ -89,11 +241,16 @@ loccar_max = 160
 # Note 2: this command line includes specification of edge extraction
 # see CatGT readme for details
 # these parameters will be used for all runs
-catGT_cmd_string = '-prb_fld -out_prb_fld -aphipass=300 -gfix=0,0.10,0.02'
+catGT_cmd_string = '-prb_fld -out_prb_fld -aphipass=300 -tshift -gfix=0.40,0.10,0.02'
+#catGT_cmd_string = '-prb_fld -out_prb_fld -apfilter=butter,16,250,0 -tshift -gfix=0.40,0.10,0.02'
+#catGT_cmd_string = '-prb_fld -out_prb_fld -gblcar -apfilter=butter,16,250,0 -gfix=0.40,0.10,0.02'
+#catGT_cmd_string = '-prb_fld -out_prb_fld -gblcar -gfix=0.40,0.10,0.02'
+#catGT_cmd_string = '-prb_3A -no_run_fld -t_miss_ok -gblcar -apfilter=butter,16,250,0 -gfix=0.40,0.10,0.02'
 
 ni_present = True
+#ni_present = False
 #ni_extract_string = '-XD=8,0,500 -XA=0,1,0.1,0'
-ni_extract_string = '-XD=8,0,500 -XA=0,1,0.1,0 -XA=1,1,0.1,2'
+ni_extract_string = '-XD=-1,0,500 -XA=0,1,0.1,0 -XA=1,1,0.1,2'
 
 
 
@@ -108,7 +265,7 @@ ks_saveRez = 1
 ks_copy_fproc = 0
 ks_templateRadius_um = 163
 ks_whiteningRadius_um = 163
-ks_minfr_goodchannels = 0.0
+ks_minfr_goodchannels = 0.1
 
 
 # ----------------------
@@ -122,28 +279,29 @@ c_Waves_snr_um = 160
 # extract param string for psth events -- copy the CatGT params used to extract
 # events that should be exported with the phy output for PSTH plots
 # If not using, remove psth_events from the list of modules
-event_ex_param_str = 'XA=4,1,50'
+event_ex_param_str = 'XA=0,1,0.1,0'
 
 # -----------------
 # TPrime parameters
 # -----------------
 runTPrime = True   # set to False if not using TPrime
+#runTPrime = False   # set to False if not using TPrime
 sync_period = 1.0   # true for SYNC wave generated by imec basestation
 toStream_sync_params = 'SY=0,-1,6,500'  # copy from the CatGT command line, no spaces
-niStream_sync_params = 'XD=8,0,500'   # copy from the CatGT comman line, set to None if no Aux data, no spaces
-#niStream_sync_params = 'XD=4,0,500'   # copy from the CatGT comman line, set to None if no Aux data, no spaces
+#niStream_sync_params = 'XD=-1,0,500'   # copy from the CatGT comman line, set to None if no Aux data, no spaces
+niStream_sync_params = 'XD=4,0,500'   # copy from the CatGT comman line, set to None if no Aux data, no spaces
 
 # ---------------
 # Modules List
 # ---------------
 # List of modules to run per probe; CatGT and TPrime are called once for each run.
 modules = [
-			#'kilosort_helper',
-            #'kilosort_postprocessing',
-            #'noise_templates',
-            #'psth_events',
-            #'mean_waveforms',
-            #'quality_metrics'
+			'kilosort_helper',
+            'kilosort_postprocessing',
+            'noise_templates',
+            'psth_events',
+            'mean_waveforms',
+            'quality_metrics'
 			]
 
 json_directory = r'C:\Kilosort-2.5\temp'

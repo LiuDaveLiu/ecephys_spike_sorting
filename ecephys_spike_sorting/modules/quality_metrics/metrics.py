@@ -510,15 +510,15 @@ def isi_violations(spike_train, min_time, max_time, isi_threshold, min_isi=0):
     num_violations = sum(isis < isi_threshold) 
     violation_time = 2*num_spikes*(isi_threshold - min_isi)
     total_rate = firing_rate(spike_train, min_time, max_time)
-    c = num_violations/(violation_time*total_rate)
-    if c < 0.25:        # valid solution to quadratic eq. for fpRate:
-        fpRate = (1 - np.sqrt(1-4*c))/2
-    else:               # no valid solution to eq, call fpRate = 1
-        fpRate = 1.0
+    #c = num_violations/(violation_time*total_rate)
+    #if c < 0.25:        # valid solution to quadratic eq. for fpRate:
+    #    fpRate = (1 - np.sqrt(1-4*c))/2
+    #else:               # no valid solution to eq, call fpRate = 1
+    #    fpRate = 1.0
      
 # older estimate that assumes f<<1
-#    violation_rate = num_violations/violation_time
-#    fpRate = violation_rate/total_rate
+    violation_rate = num_violations/violation_time
+    fpRate = violation_rate/total_rate
 
     return fpRate, num_violations
 

@@ -35,6 +35,7 @@ def createInputJson(output_file,
                     catGT_loccar_min_um = 40,
                     catGT_loccar_max_um = 160,
                     catGT_cmd_string = '-prb_fld -out_prb_fld -aphipass=300-gfix=0.40,0.10,0.02',
+                    catGT_extract_string = '',
                     noise_template_use_rf = True,
                     event_ex_param_str = 'XD=4,1,50',
                     tPrime_im_ex_list = 'SY=0,384,6,500',
@@ -50,7 +51,7 @@ def createInputJson(output_file,
                     ks_labelGood = 1,
                     ks_saveRez = 1,
                     ks_copy_fproc = 0,
-                    ks_minfr_goodchannels = 0.1,                  
+                    ks_minfr_goodchannels = 0.0,                  
                     ks_whiteningRadius_um = 163,
                     ks_Th = '[10,4]',
                     ks_CSBseed = 1,
@@ -61,12 +62,14 @@ def createInputJson(output_file,
                     ):
 
     # hard coded paths to code on your computer and system
-    ecephys_directory = r'D:\ecephys_fork\ecephys_spike_sorting\ecephys_spike_sorting'
+    ecephys_directory = r'C:\Users\NuoLiLabTower2\Documents\GitHub\ecephys_spike_sorting\ecephys_spike_sorting'
     
     # location of kilosor respository and kilosort version
 
-    kilosort_repository = r'C:\Users\labadmin\Documents\jic\KS20_release'
-    KS2ver = '2.0'      # must equal '3.0', '2.5' or '2.0', and match the kiilosort_repository
+    #kilosort_repository = r'C:\Kilosort-2.0'
+    #KS2ver = '2.0'      # must equal '3.0', '2.5' or '2.0', and match the kiilosort_repository
+    kilosort_repository = r'C:\Kilosort-2.5'
+    KS2ver = '2.5'      # must equal '3.0', '2.5' or '2.0', and match the kiilosort_repository
     
     # KS 3.0 does not yet output pcs.
     if KS2ver == '3.0':
@@ -74,14 +77,14 @@ def createInputJson(output_file,
     else:
         include_pcs = True
     
-    npy_matlab_repository = r'C:\Users\labadmin\Documents\jic\npy-matlab-master'
-    catGTPath = r'C:\Users\labadmin\Documents\jic\CatGT-win'
-    tPrime_path=r'C:\Users\labadmin\Documents\jic\TPrime-win'
-    cWaves_path=r'C:\Users\labadmin\Documents\jic\C_Waves-win'
+    npy_matlab_repository = r'C:\npy-matlab-master\npy-matlab'
+    catGTPath = r'C:\CatGT-win'
+    tPrime_path=r'C:\TPrime-win'
+    cWaves_path=r'C:\C_Waves-win'
     
      
     # for config files and kilosort working space
-    kilosort_output_tmp = r'D:\kilosort_datatemp' 
+    kilosort_output_tmp = r'E:\kilosort_datatemp' 
     
     
     # derived directory names
@@ -117,7 +120,7 @@ def createInputJson(output_file,
             print('SpikeGLX params read from meta')
             print('probe type: {:s}, sample_rate: {:.5f}, num_channels: {:d}, uVPerBit: {:.4f}'.format\
                   (probe_type, sample_rate, num_channels, uVPerBit))
-        #print('kilosort output directory: ' + kilosort_output_directory )
+        print('kilosort output directory: ' + kilosort_output_directory )
 
         
     else:
@@ -170,7 +173,7 @@ def createInputJson(output_file,
             "extracted_data_directory": extracted_data_directory,
             "kilosort_output_directory": kilosort_output_directory,
             "kilosort_output_tmp": kilosort_output_tmp
-       },
+        },
 
         "common_files": {
             "settings_json" : npx_directory,
@@ -234,7 +237,7 @@ def createInputJson(output_file,
             "matlab_home_directory": kilosort_output_tmp,
             "kilosort_repository" : kilosort_repository,
             "npy_matlab_repository" : npy_matlab_repository,
-            "kilosort_version" : 2,
+            "kilosort_version" : 2.5,
             "spikeGLX_data" : True,
             "ks_make_copy": ks_make_copy,
             "surface_channel_buffer" : 15,
@@ -319,6 +322,7 @@ def createInputJson(output_file,
             "loccar_inner" : catGT_loccar_min_sites,
             "loccar_outer": catGT_loccar_max_sites,
             "cmdStr" : catGT_cmd_string,
+            "extract_string" : catGT_extract_string,
             "catGTPath" : catGTPath
         },
 
